@@ -7,6 +7,7 @@ from urllib import parse
 import execjs
 
 import requests
+import time
 
 from wenshu_utils.cipher import CipherText
 from wenshu_utils.des3 import des3decrypt
@@ -31,7 +32,7 @@ class NewDemo:
     def _request(self, data: dict) -> requests.Response:
 
         response = self.session.post(self.url.geturl(), data=data)
-        print(data)
+
         if response.status_code != 200:
             raise Exception(response.status_code)
 
@@ -72,12 +73,18 @@ def WenShuCrawler():
                 if not result_page:
                     continue
 
-                for docId in result_page["relWenshu"].keys():
+                doc_id_list = result_page["relWenshu"].keys()
+                if len(doc_id_list) == 0:
+                    print("no more doc in keyword: %s, crawler will sleep 10s for anti-crawl policy" % keyword)
+                    time.sleep(10)
+                    continue
+
+                for docId in doc_id_list:
                     data_doc = get_detail_page_payload(docId)
 
-                    print("trying to get detail page, docid =%s" % docId)
+                    print("getting detail page..... docid=%s" % docId)
                     result_doc = demo._request(data_doc)
-                    print("get detail page success", result_doc)
+                    print("get detail page success", result_doc, "\n")
                     f.write(str(result_doc) + '\n')
 
     f.close()
@@ -92,6 +99,7 @@ def get_list_page_payload(keyword: str):
         "sortFields": "s50:desc",
         "ciphertext": CipherText(),
         "pageNum": 1,
+        "pageSize": 20,
         "queryCondition": json.dumps([query]),
         "cfg": "com.lawyee.judge.dc.parse.dto.SearchDataDsoDTO@queryDoc",
         "__RequestVerificationToken": RequestVerificationToken(24),
