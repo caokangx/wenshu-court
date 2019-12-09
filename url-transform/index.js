@@ -6,9 +6,11 @@ const Window = require('window')
 
 const window = new Window()
 ;(function() {
-  var _$t_ = 0,
-    _$VP = $_ts.scj,
-    _$7d = $_ts.aebi
+//   if (global) {
+//     global[transformUrlMethodName] = transformeUrl
+//   }
+  var _$7d = $_ts.aebi
+  
   function _$_M() {
     var _$tl = [438]
     Array.prototype.push.apply(_$tl, arguments)
@@ -209,7 +211,8 @@ const window = new Window()
   var _$jP = false
   try {
     var _$Ts = _$Xm[_$si[17]]
-  } catch (_$$3) {}
+  } 
+  catch (_$$3) {}
   _$B7()
   _$Xm._$ZM = _$f5
   _$Xm._$5p = _$nQ
@@ -275,9 +278,9 @@ const window = new Window()
     _$RC = 0
   var _$bx = 'HM4hUBT0dDOn' + _$si[144]
   var _$JH = _$bx
-//   if (_$Nn()[_$si[47]] === _$si[54]) {
-//     _$JH += _$si[256]
-//   }
+  //   if (_$Nn()[_$si[47]] === _$si[54]) {
+  //     _$JH += _$si[256]
+  //   }
   var _$Tw
   var _$OS
   var _$QW, _$C5, _$up
@@ -358,7 +361,7 @@ const window = new Window()
     _$Xe()
   }
   function _$4C() {
-      return
+    return
     var _$tJ = _$tI[_$si[51]](_$si[80])
     var _$JD = _$tJ[_$tJ.length - 1]
     _$JD.parentNode[_$si[13]](_$JD)
@@ -405,7 +408,7 @@ const window = new Window()
       _$u4[_$si[41]](_$vt, _$Af, _$Vo)
     } else {
       _$vt = 'on' + _$vt
-      _$u4[_$si[441]](_$vt, _$Af)
+    //   _$u4[_$si[441]](_$vt, _$Af)
     }
   }
   function _$tD(_$u4, _$vt) {
@@ -420,7 +423,7 @@ const window = new Window()
     return new _$AD()[_$si[69]]()
   }
   function _$ct() {
-    return _$Xm.Math[_$si[55]](new _$AD()[_$si[69]]() / 1000)
+    return Math[_$si[55]](new _$AD()[_$si[69]]() / 1000)
   }
   function _$95() {
     return _$qY + _$Xi() - _$_k
@@ -440,18 +443,18 @@ const window = new Window()
     return _$JD.join('')
   }
   function _$q8() {
-    if (!_$YE(_$Nn()[_$si[4]], _$si[495])) {
-      _$Xm = _$5p
-      _$5p = _$tI
-      _$zg._$oL = 1
-      _$4C()
-    }
+    // if (!_$YE(_$Nn()[_$si[4]], _$si[495])) {
+    //   _$Xm = _$5p
+    //   _$5p = _$tI
+    //   _$zg._$oL = 1
+    //   _$4C()
+    // }
   }
   function _$S9(_$u4) {
-    var _$tJ = _$K8(14)
+    var _$tJ = _$K8(14) || []
     if (_$tJ.length === 0)
       _$tJ = _$Nn()[_$si[47]] === _$si[54] ? '443' : (_$tJ = '80')
-    return _$nr + _$tJ + _$u4
+    return 'HM4hUBT0dDOn' + _$tJ + _$u4
   }
   function _$wF() {
     var _$tJ = 3,
@@ -574,7 +577,7 @@ const window = new Window()
     return _$JD._$7P(_$tJ, true)
   }
   function _$J2(_$u4) {
-    var _$tJ = _$Xm.Math[_$si[55]](_$Xm.Math[_$si[550]]() * 256)
+    var _$tJ = Math[_$si[55]](Math[_$si[550]]() * 256)
     _$u4 = _$u4[_$si[8]](_$KM(_$ct()))
     for (var _$JD = 0; _$JD < _$u4.length; _$JD++) {
       _$u4[_$JD] ^= _$tJ
@@ -596,7 +599,7 @@ const window = new Window()
     var _$wx = _$tJ.length - 4
     var _$X5 = _$ct() - _$Vh(_$tJ[_$si[1]](_$wx))[0]
     _$tJ = _$tJ[_$si[1]](0, _$wx)
-    var _$IQ = _$Xm.Math[_$si[5]](_$Xm[_$si[78]].log(_$X5 / 1.164 + 1))
+    var _$IQ = Math[_$si[5]](Math.log(_$X5 / 1.164 + 1))
     var _$IH = _$tJ.length
     var _$OX = [0, _$zg._$oL][_$hq]
     _$rV = 0
@@ -1178,9 +1181,7 @@ const window = new Window()
   function _$PL(_$u4) {
     return _$Sa[_$si[5]](_$rC() * _$u4)
   }
-  function _$B7() {
-    
-  }
+  function _$B7() {}
   function _$OA(_$u4, _$vt) {
     if (!_$Ts) return
     if (typeof _$u4 === _$si[66]) {
@@ -2075,31 +2076,49 @@ const window = new Window()
         _$tJ[_$Wr].parentElement[_$si[13]](_$tJ[_$Wr])
       }
     }
-    _$zg._$lk = _$zg[_$zg._$lk](_$tJ)
+    // _$zg._$lk = _$zg[_$zg._$lk](_$tJ)
   }
   function _$05(_$u4, _$vt) {
-    try {
-      if (typeof _$u4 !== _$si[6]) _$u4 += ''
-    } catch (_$tJ) {
-      return _$u4
-    }
-    if (!(_$Ga & 1024)) {
-      _$u4 = _$Vs(_$u4)
-    }
-    var _$JD = _$Es(_$u4)
-    if (_$JD === null) {
-      return _$u4
-    }
-    if (_$JD._$Sa > 3) {
-      return _$xl(_$JD)
-    }
-    var _$rV = _$Nh(_$Bh(_$go(_$JD._$Ww + _$JD._$rC)))
-    var _$u4 = _$JD._$iv + _$JD._$rC
-    if (_$JD._$rC === '') _$u4 = _$u4 + '?'
-    else _$u4 = _$u4 + '&'
-    var _$i1 = _$JD._$2_ + _$u4
-    _$i1 += _$ji(779, _$JD._$AD, _$rV, _$vt)
-    _$i1 += _$JD._$bB
+    // try {
+    //   if (typeof _$u4 !== _$si[6]) _$u4 += ''
+    // } catch (_$tJ) {
+    //   return _$u4
+    // }
+    // if (!(4096 & 1024)) {
+    //   _$u4 = _$Vs(_$u4)
+    // }
+    var _$JD = _$u4
+    _$rV = [
+      111,
+      148,
+      186,
+      15,
+      18,
+      157,
+      246,
+      73,
+      80,
+      158,
+      187,
+      255,
+      34,
+      54,
+      93,
+      15,
+    ]
+    // if (_$JD === null) {
+    //   return _$u4
+    // }
+    // if (_$JD._$Sa > 3) {
+    //   return _$xl(_$JD)
+    // }
+    // var _$rV = _$Nh(_$Bh(_$go(_$JD._$Ww + _$JD._$rC)))
+    // var _$u4 = _$JD._$iv + _$JD._$rC
+    // if (_$JD._$rC === '') _$u4 = _$u4 + '?'
+    // else _$u4 = _$u4 + '&'
+    // var _$i1 = _$JD._$2_ + _$u4
+    _$u4 = _$u4 + '?' + _$ji(779, _$JD, _$rV, undefined)
+    // _$i1 += _$JD._$bB
     return _$i1
   }
   function _$Y5() {
@@ -2131,7 +2150,7 @@ const window = new Window()
       if (_$JD) {
         _$Gb = _$JD[_$si[26]]
         _$S1 = _$JD[_$si[45]]
-        _$JD[_$si[26]] = _$i1
+        _$JD[_$si[26]] = transformeUrl
       } else {
         _$Xm[_$si[95]] = _$wx
       }
@@ -2157,14 +2176,14 @@ const window = new Window()
       if (_$Xx) return new _$GY(_$Sg, _$Xx)
       return new _$GY(_$Sg)
     }
+
     // the function transformed url
-    function _$i1(url) {
-      _$Tw()
+    function transformeUrl(url) {
       return _$05(url)
     }
 
     if (global) {
-      global[transformUrlMethodName] = _$i1
+      global[transformUrlMethodName] = transformeUrl
     }
 
     function _$wx() {
@@ -3487,10 +3506,7 @@ const window = new Window()
   function _$eE() {
     return (_$N7(16) + _$5N(4) + _$Ev(0) + 1) & 0xff
   }
-  var _$cL,
-    _$CG,
-    _$N$ = _$t_,
-    _$a0 = _$7d[0]
+
   function _$ji(_$SP, _$u4, _$vt, _$Af) {
     function _$6R() {
       var _$ka = [64]
@@ -3672,7 +3688,7 @@ const window = new Window()
               }
             } else {
               if (_$QS < 13) {
-                _$u4 = _$Xm.Math[_$si[31]](_$u4)
+                _$u4 = Math[_$si[31]](_$u4)
               } else if (_$QS < 14) {
                 _$Qa = _$ji(128)
               } else if (_$QS < 15) {
@@ -3793,7 +3809,7 @@ const window = new Window()
               } else if (_$QS < 26) {
                 _$GY.get(_$si[253], _$eZ)
               } else if (_$QS < 27) {
-                _$Xm[_$si[136]](_$gl)
+                // _$Xm[_$si[136]](_$gl)
               } else {
                 if (!_$Qa) _$kg += 9
               }
@@ -4189,7 +4205,7 @@ const window = new Window()
               } else if (_$QS < 146) {
                 _$44(1, 1)
               } else if (_$QS < 147) {
-                return _$1h[_$si[0]](_$JD, _$rk, '=')
+                return _$1h[_$si[0]](_$JD, '', '=')
               } else {
                 _$i1[_$tJ++] = _$_1
               }
@@ -4240,17 +4256,17 @@ const window = new Window()
                   if (_$tJ && _$tJ[_$si[97]]) {
                     _$tJ[_$si[109]] = 200
                     _$tJ[_$si[406]] = 50
-                    _$JD = _$tJ[_$si[97]]('2d')
+                    // _$JD = _$tJ[_$si[97]]('2d')
                     _$rV = _$si[87]
-                    _$JD[_$si[468]] = 'top'
-                    _$JD[_$si[376]] = _$si[279]
-                    _$JD[_$si[226]] = _$si[248]
-                    _$JD[_$si[249]](0, 0, 100, 30)
-                    _$JD[_$si[226]] = _$si[464]
-                    _$JD[_$si[537]](_$rV, 3, 16)
-                    _$JD[_$si[226]] = _$si[200]
-                    _$JD[_$si[537]](_$rV, 5, 18)
-                    _$i1 = _$ZW(_$WT(_$tJ[_$si[234]]()))
+                    // _$JD[_$si[468]] = 'top'
+                    // _$JD[_$si[376]] = _$si[279]
+                    // _$JD[_$si[226]] = _$si[248]
+                    // _$JD[_$si[249]](0, 0, 100, 30)
+                    // _$JD[_$si[226]] = _$si[464]
+                    // _$JD[_$si[537]](_$rV, 3, 16)
+                    // _$JD[_$si[226]] = _$si[200]
+                    // _$JD[_$si[537]](_$rV, 5, 18)
+                    _$i1 = _$ZW()
                     _$ji(249, _$si[50], _$i1)
                     return _$i1
                   }
@@ -4258,7 +4274,7 @@ const window = new Window()
               }
             } else if (_$QS < 168) {
               if (_$QS < 165) {
-                _$i1[_$tJ++] = _$ji(257, _$Xm.Math[_$si[31]](_$Z4))
+                _$i1[_$tJ++] = _$ji(257, Math[_$si[31]](_$Z4))
               } else if (_$QS < 166) {
                 _$i1 = _$0h(7)
               } else if (_$QS < 167) {
@@ -4392,7 +4408,7 @@ const window = new Window()
               } else if (_$QS < 195) {
                 _$Qa = _$Xm._$O_
               } else {
-                _$Xy = _$Xm.Math[_$si[31]](
+                _$Xy = Math[_$si[31]](
                   (_$82 + (_$Dq ? _$Xi() - _$UA : 0)) / 100.0,
                 )
               }
@@ -4485,7 +4501,7 @@ const window = new Window()
               if (_$QS < 225) {
                 _$i1[_$tJ++] = _$ji(257, _$Im)
               } else if (_$QS < 226) {
-                _$bk.push(_$Xm[_$si[93]](_$AJ, 50000))
+                _$bk.push(window[_$si[93]](_$AJ, 50000))
               } else if (_$QS < 227) {
                 _$i1[_$tJ++] = _$d$
               } else {
@@ -4629,7 +4645,7 @@ const window = new Window()
               }
             } else {
               if (_$QS < 253) {
-                _$IQ = _$Xm.Math[_$si[31]]((_$Xi() - _$A7) / 100.0)
+                _$IQ = Math[_$si[31]]((_$Xi() - _$A7) / 100.0)
               } else if (_$QS < 254) {
                 for (_$Af = _$Af || 0; _$Af < _$u4.length; ++_$Af)
                   if (_$u4[_$Af] === _$vt) return _$Af
@@ -4718,7 +4734,7 @@ const window = new Window()
               if (_$QS < 281) {
                 try {
                   _$tJ = _$tI[_$si[9]](_$si[92])
-                  _$GY = _$tJ[_$si[97]](_$si[289]) || _$tJ[_$si[97]](_$si[246])
+                //   _$GY = _$tJ[_$si[97]](_$si[246])
                 } catch (_$JD) {
                   return
                 }
@@ -5567,54 +5583,7 @@ const window = new Window()
                 _$zf[_$si[515]]('')
                 _$zf[_$si[260]](_$e_, _$wd)
                 _$Fo = 0
-                function checkTimer() {
-                  _$bB(_$J4, 20)
-                  function _$J4() {
-                    if (_$zf[_$si[475]]) {
-                      _$tJ = _$NB[_$si[0]](_$zf[_$si[475]].sdp, '\n')
-                      _$tJ[_$si[110]](_$OO)
-                    }
-                    if (_$Fo < 100 && !(_$jk && _$x_)) {
-                      _$hk(112)
-                      _$Fo++
-                    }
-                    function _$OO(_$zU) {
-                      if (_$t$[_$si[0]](_$zU, _$si[345]) === 0) _$hk(114, _$zU)
-                    }
-                  }
-                }
                 _$hk(112)
-                function handleCandidate(_$Sg) {
-                  var _$tJ = _$tA[_$si[277]](_$Sg),
-                    _$JD = _$tJ ? _$tJ[1] : null
-                  if (_$JD) _$JD = _$JD[_$si[70]](/(^\s*)|(\s*$)/g, '')
-                  if (!_$JD || _$GY[_$JD]) return
-                  if (_$t$[_$si[0]](_$Sg, _$si[372]) !== -1) {
-                    _$x_ = _$ji(655, _$JD)
-                    _$rV = _$ji(235, _$si[42])
-                    if (_$x_ && _$rV !== _$ZW(_$x_)) {
-                      if (_$x_.length === 4) {
-                        _$ji(249, _$si[42], _$ZW(_$x_))
-                      } else if (_$x_.length === 16) {
-                        if (!_$rV || _$rV.length > 10) {
-                          _$ji(249, _$si[42], _$ZW(_$x_))
-                        }
-                      }
-                    }
-                  } else if (_$t$[_$si[0]](_$Sg, _$si[318]) !== -1) {
-                    _$jk = _$ji(655, _$JD)
-                    _$i1 = _$ji(235, _$si[61])
-                    if (_$jk && _$i1 !== _$ZW(_$jk)) {
-                      if (_$jk.length === 4) {
-                        _$ji(249, _$si[61], _$ZW(_$jk))
-                      } else if (_$jk.length === 16) {
-                        if (!_$i1 || _$i1.length > 10) {
-                          _$ji(249, _$si[61], _$ZW(_$jk))
-                        }
-                      }
-                    }
-                  }
-                }
               } catch (_$rV) {}
             } else {
               try {
@@ -6376,3 +6345,6 @@ const window = new Window()
     }
   }
 })()
+
+console.log(global[transformUrlMethodName]('test'))
+console.log('end')
